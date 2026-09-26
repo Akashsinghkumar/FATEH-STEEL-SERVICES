@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock & Facility Gallery | FATEH STEEL SERVICES</title>
+  <meta name="description" content="View high-resolution warehouse stock and facility gallery photos of round bars, RCS billets, bundles, and forged steel at Fateh Steel Services.">
+  
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/mousecursor.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Magic Cursor -->
+  <div class="mouse-cursor cursor-outer"></div>
+  <div class="mouse-cursor cursor-inner"></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar d-none d-md-block">
+    <div class="container-fluid px-lg-5">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-3">
+          <span><i class="fas fa-shield-alt text-green me-1"></i> Govt. Recognized:</span>
+          <span class="top-bar-badge"><i class="fas fa-certificate"></i> GSTIN: 03EIYPS8359Q1ZR</span>
+          <span class="top-bar-badge"><i class="fas fa-building"></i> UDYAM-PB-12-0274183</span>
+        </div>
+        <div class="d-flex align-items-center gap-4">
+          <a href="tel:+919876543210"><i class="fas fa-phone-alt text-green me-1"></i> +91 98765 43210</a>
+          <a href="mailto:info@fatehsteelservices.com"><i class="fas fa-envelope text-green me-1"></i> info@fatehsteelservices.com</a>
+          <span class="badge bg-success bg-opacity-75 text-white fw-bold px-3 py-1">Size: 14mm - 230mm Dia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header with Submenu -->
+  <header class="main-nav">
+    <div class="container-fluid px-lg-5 py-3">
+      <div class="d-flex align-items-center justify-content-between">
+        
+        <a href="index.html" class="navbar-brand-custom">
+          <img src="images/logo.png" alt="Fateh Steel Services Logo" class="brand-logo-img">
+          <div class="brand-text d-none d-sm-block">
+            <h2>FATEH <span class="text-gradient">STEEL</span></h2>
+            <span>SERVICES &bull; SPECIAL STEEL</span>
+          </div>
+        </a>
+
+        <nav class="d-none d-lg-block">
+          <ul class="nav-links-custom">
+            <li><a href="index.html" class="nav-link-item">Home</a></li>
+            <li><a href="about.html" class="nav-link-item">About Us</a></li>
+            
+            <li class="nav-dropdown">
+              <a href="products.html" class="nav-link-item">
+                Products & Sizes <i class="fas fa-chevron-down ms-1 fs-7"></i>
+              </a>
+              <div class="dropdown-menu-custom">
+                <a href="products.html" class="dropdown-item-custom">
+                  <i class="fas fa-cubes"></i> Core Products & Size Spectrum
+                </a>
+                <a href="grades.html" class="dropdown-item-custom">
+                  <i class="fas fa-flask"></i> Steel Grades & Chemical Matrix
+                </a>
+                <a href="calculator.html" class="dropdown-item-custom">
+                  <i class="fas fa-calculator"></i> Steel Weight Calculator
+                </a>
+                <a href="quality.html" class="dropdown-item-custom">
+                  <i class="fas fa-stamp"></i> Quality & Lab Testing
+                </a>
+              </div>
+            </li>
+
+            <li><a href="gallery.html" class="nav-link-item active">Stock Gallery</a></li>
+            <li><a href="contact.html" class="nav-link-item">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-molten d-none d-sm-inline-flex" data-bs-toggle="modal" data-bs-target="#rfqModal">
+            <i class="fas fa-file-invoice me-1"></i> Request Quote
+          </button>
+          <button class="btn btn-outline-steel d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Offcanvas -->
+  <div class="offcanvas offcanvas-end bg-white text-dark" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-25">
+      <div class="d-flex align-items-center gap-2">
+        <img src="images/logo.png" alt="FSS Logo" style="height: 42px;">
+        <h5 class="offcanvas-title text-gradient fw-bold mb-0">FATEH STEEL</h5>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-unstyled d-flex flex-column gap-3 fs-6">
+        <li><a href="index.html" class="text-dark fw-bold"><i class="fas fa-home text-blue me-2"></i>Home</a></li>
+        <li><a href="about.html" class="text-dark fw-bold"><i class="fas fa-info-circle text-blue me-2"></i>About Us</a></li>
+        <li class="border-top border-bottom py-2 my-1">
+          <div class="fw-bold text-blue mb-2"><i class="fas fa-layer-group text-green me-2"></i>Products & Sizing:</div>
+          <div class="ps-3 d-flex flex-column gap-2 small">
+            <a href="products.html" class="text-secondary fw-semibold">&bull; Core Products (Round, RCS, Hex)</a>
+            <a href="grades.html" class="text-secondary fw-semibold">&bull; Steel Grades Matrix (50+ Grades)</a>
+            <a href="calculator.html" class="text-secondary fw-semibold">&bull; Steel Weight Calculator</a>
+            <a href="quality.html" class="text-secondary fw-semibold">&bull; Quality & Lab Testing</a>
+          </div>
+        </li>
+        <li><a href="gallery.html" class="text-blue fw-bold"><i class="fas fa-warehouse text-green me-2"></i>Stock Gallery</a></li>
+        <li><a href="contact.html" class="text-dark fw-bold"><i class="fas fa-envelope text-blue me-2"></i>Contact Us</a></li>
+      </ul>
+      <div class="mt-4 pt-3 border-top border-secondary border-opacity-25">
+        <p class="small text-muted mb-1 font-monospace">GSTIN: 03EIYPS8359Q1ZR</p>
+        <p class="small text-muted mb-3 font-monospace">UDYAM-PB-12-0274183</p>
+        <button class="btn btn-molten w-100" data-bs-toggle="modal" data-bs-target="#rfqModal" data-bs-dismiss="offcanvas">
+          <i class="fas fa-file-invoice me-2"></i> Request Instant Quote
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Banner -->
+  <section class="page-banner-section">
+    <div class="container-fluid px-lg-5 position-relative" style="z-index: 2;">
+      <div class="row align-items-center">
+        <div class="col-lg-10">
+          <div class="page-banner-badge"><i class="fas fa-warehouse"></i> Live Inventory</div>
+          <h1 class="banner-title">Stock & Warehouse Gallery</h1>
+          <p class="banner-subtitle mb-0">High-Resolution Visual Showcase of Ready Stock Consignments, Forging Billets & Bundled Steel Bars.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stock Gallery Showcase -->
+  <section class="section-padding bg-surface">
+    <div class="container-fluid px-lg-5">
+      
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <div class="section-tag mx-auto">
+          <i class="fas fa-camera"></i> Verified Warehouse Stock
+        </div>
+        <h2 class="section-title">
+          REAL-TIME <span class="text-gradient">INVENTORY SHOWCASE</span>
+        </h2>
+        <p class="section-desc mx-auto">
+          Click any photo to open full-screen high-definition lightbox inspection.
+        </p>
+      </div>
+
+      <div class="row g-4 popup-gallery">
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card p-2 text-center shadow-sm">
+            <a href="images/client/steel-stock-3.jpg" class="popup-link" title="Special Alloy Round Bars Stock - Fateh Steel Services">
+              <div class="overflow-hidden rounded-3 position-relative" style="height: 260px;">
+                <img src="images/client/steel-stock-3.jpg" alt="Steel Round Bars" class="w-100 h-100 object-fit-cover" style="transition: transform 0.5s ease;">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 opacity-0 hover-opacity-100 transition-all">
+                  <i class="fas fa-expand-arrows-alt text-white fs-3"></i>
+                </div>
+              </div>
+            </a>
+            <div class="p-3 text-start">
+              <h5 class="text-dark mb-1 fw-bold">Peeled & Turned Round Bars</h5>
+              <span class="text-blue small font-monospace">14mm - 230mm Dia Certified Stock</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card p-2 text-center shadow-sm">
+            <a href="images/client/steel-stock-2.jpg" class="popup-link" title="Bundled Round & RCS Consignments">
+              <div class="overflow-hidden rounded-3 position-relative" style="height: 260px;">
+                <img src="images/client/steel-stock-2.jpg" alt="Bundled Steel" class="w-100 h-100 object-fit-cover" style="transition: transform 0.5s ease;">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 opacity-0 hover-opacity-100 transition-all">
+                  <i class="fas fa-expand-arrows-alt text-white fs-3"></i>
+                </div>
+              </div>
+            </a>
+            <div class="p-3 text-start">
+              <h5 class="text-dark mb-1 fw-bold">RCS Billets & Forging Rounds</h5>
+              <span class="text-blue small font-monospace">55mm - 160mm RCS Ready for Dispatch</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card p-2 text-center shadow-sm">
+            <a href="images/client/steel-stock-4.jpg" class="popup-link" title="Cold Drawn Hexagonal & Bright Steel">
+              <div class="overflow-hidden rounded-3 position-relative" style="height: 260px;">
+                <img src="images/client/steel-stock-4.jpg" alt="Hexagonal Steel" class="w-100 h-100 object-fit-cover" style="transition: transform 0.5s ease;">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 opacity-0 hover-opacity-100 transition-all">
+                  <i class="fas fa-expand-arrows-alt text-white fs-3"></i>
+                </div>
+              </div>
+            </a>
+            <div class="p-3 text-start">
+              <h5 class="text-dark mb-1 fw-bold">Hexagonal & Special Sections</h5>
+              <span class="text-blue small font-monospace">24mm - 78mm HEX Fastener Stock</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card p-2 text-center shadow-sm">
+            <a href="images/client/steel-stock-1.jpg" class="popup-link" title="Precision Cut Alloy Billets & Blocks">
+              <div class="overflow-hidden rounded-3 position-relative" style="height: 260px;">
+                <img src="images/client/steel-stock-1.jpg" alt="Precision Alloy Steel" class="w-100 h-100 object-fit-cover" style="transition: transform 0.5s ease;">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 opacity-0 hover-opacity-100 transition-all">
+                  <i class="fas fa-expand-arrows-alt text-white fs-3"></i>
+                </div>
+              </div>
+            </a>
+            <div class="p-3 text-start">
+              <h5 class="text-dark mb-1 fw-bold">Forging Quality Ingots & Cuts</h5>
+              <span class="text-blue small font-monospace">Ready Cut Lengths for Die Forging</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card p-2 text-center shadow-sm">
+            <a href="images/client/steel-stock-5.jpg" class="popup-link" title="Carbon & Case Hardening Steel Bars">
+              <div class="overflow-hidden rounded-3 position-relative" style="height: 260px;">
+                <img src="images/client/steel-stock-5.jpg" alt="Carbon Steel Bars" class="w-100 h-100 object-fit-cover" style="transition: transform 0.5s ease;">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 opacity-0 hover-opacity-100 transition-all">
+                  <i class="fas fa-expand-arrows-alt text-white fs-3"></i>
+                </div>
+              </div>
+            </a>
+            <div class="p-3 text-start">
+              <h5 class="text-dark mb-1 fw-bold">Commercial & Special Grade Stock</h5>
+              <span class="text-blue small font-monospace">Bundled & Strapped with MTC Tagging</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card p-2 text-center shadow-sm">
+            <a href="images/client/steel-stock-6.jpg" class="popup-link" title="Finished Bright Bars Warehouse">
+              <div class="overflow-hidden rounded-3 position-relative" style="height: 260px;">
+                <img src="images/client/steel-stock-6.jpg" alt="Finished Bright Bars" class="w-100 h-100 object-fit-cover" style="transition: transform 0.5s ease;">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 opacity-0 hover-opacity-100 transition-all">
+                  <i class="fas fa-expand-arrows-alt text-white fs-3"></i>
+                </div>
+              </div>
+            </a>
+            <div class="p-3 text-start">
+              <h5 class="text-dark mb-1 fw-bold">Finished Bright Bars Bay</h5>
+              <span class="text-blue small font-monospace">Surface Protected with Anti-Rust Coating</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container-fluid px-lg-5">
+      <div class="row g-4">
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="navbar-brand-custom mb-3">
+            <img src="images/logo.png" alt="Fateh Steel Services Logo" class="brand-logo-img" style="height: 56px; background: #ffffff; padding: 4px; border-radius: 8px;">
+            <div class="brand-text">
+              <h2 class="text-white">FATEH <span class="text-gradient">STEEL</span></h2>
+              <span class="text-green">SERVICES &bull; SPECIAL STEEL</span>
+            </div>
+          </div>
+          <p class="text-light small pe-lg-4 mb-3" style="line-height: 1.7; opacity: 0.9;">
+            Premier stockist, manufacturer & supplier of Special Alloy Steel, Carbon Steel, Tool Steel, Bright Bars, RCS billets and Hexagonal profiles with guaranteed Mill Test Certificates.
+          </p>
+          <div class="d-flex flex-column gap-2 mt-2">
+            <span class="top-bar-badge d-inline-flex w-auto"><i class="fas fa-shield-alt"></i> GSTIN: 03EIYPS8359Q1ZR</span>
+            <span class="top-bar-badge d-inline-flex w-auto"><i class="fas fa-building"></i> UDYAM-PB-12-0274183</span>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6 footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-angle-right text-green"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-angle-right text-green"></i> About Us</a></li>
+            <li><a href="products.html"><i class="fas fa-angle-right text-green"></i> Product Range</a></li>
+            <li><a href="grades.html"><i class="fas fa-angle-right text-green"></i> Grades Matrix</a></li>
+            <li><a href="calculator.html"><i class="fas fa-angle-right text-green"></i> Weight Calculator</a></li>
+            <li><a href="gallery.html"><i class="fas fa-angle-right text-green"></i> Stock Gallery</a></li>
+            <li><a href="contact.html"><i class="fas fa-angle-right text-green"></i> Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-6 footer-col">
+          <h4>Supply Sizes</h4>
+          <ul class="footer-links">
+            <li><a href="products.html"><i class="fas fa-circle-dot text-green"></i> Round: 14mm - 230mm</a></li>
+            <li><a href="products.html"><i class="fas fa-square text-green"></i> RCS: 55mm - 160mm</a></li>
+            <li><a href="products.html"><i class="fas fa-draw-polygon text-green"></i> Hex: 24mm - 78mm</a></li>
+            <li><a href="grades.html"><i class="fas fa-layer-group text-green"></i> Tool: H11, H13, D2, D3</a></li>
+            <li><a href="grades.html"><i class="fas fa-layer-group text-green"></i> Alloy: 4140, 20MnCr5, EN24</a></li>
+            <li><a href="grades.html"><i class="fas fa-layer-group text-green"></i> Bearing: EN31, 52100</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-col">
+          <h4>Registered Contact</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-pin"></i>
+            <div>
+              <strong class="text-white d-block">Works & Office:</strong>
+              <span>Punjab, India (Special Steel Hub)</span>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <strong class="text-white d-block">Sales Hotline:</strong>
+              <a href="tel:+919876543210" class="text-light">+91 98765 43210 / 34876455128</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong class="text-white d-block">Email Support:</strong>
+              <a href="mailto:info@fatehsteelservices.com" class="text-light">info@fatehsteelservices.com</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <div>
+          &copy; <span id="year">2026</span> <strong>FATEH STEEL SERVICES</strong>. All Rights Reserved.
+        </div>
+        <div class="d-flex gap-3 text-light small">
+          <span class="text-green fw-bold">&bull; 100% MTC Certified</span>
+          <span>&bull;</span>
+          <span>Pan-India Supply</span>
+          <span>&bull;</span>
+          <span>Fast Dispatch</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA Button -->
+  <a href="https://wa.me/919876543210?text=Hello%20Fateh%20Steel%20Services,%20I%20have%20an%20inquiry%20regarding%20steel%20supplies" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Request Quote Popup Modal -->
+  <div class="modal fade" id="rfqModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rfq-modal-content">
+        <div class="modal-header rfq-modal-header">
+          <div class="d-flex align-items-center gap-2">
+            <i class="fas fa-file-invoice text-green fs-4"></i>
+            <h5 class="modal-title text-white mb-0">Request Instant Quotation</h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body rfq-modal-body">
+          <form onsubmit="event.preventDefault(); const g = document.getElementById('modal-grade').value; const s = document.getElementById('modal-size').value; const q = document.getElementById('modal-qty').value; window.open('https://wa.me/919876543210?text=' + encodeURIComponent('*QUICK QUOTE INQUIRY*\nGrade: ' + g + '\nSize: ' + s + '\nQuantity: ' + q), '_blank');">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label text-dark small fw-bold">Required Grade:</label>
+                <input type="text" id="modal-grade" class="form-control bg-light border-secondary border-opacity-25 text-dark py-2" placeholder="e.g. 42CrMo4 / EN8 / 20MnCr5" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label text-dark small fw-bold">Size (Dia / RCS / HEX):</label>
+                <input type="text" id="modal-size" class="form-control bg-light border-secondary border-opacity-25 text-dark py-2" placeholder="e.g. 50mm Dia / 80mm RCS" required>
+              </div>
+              <div class="col-md-12">
+                <label class="form-label text-dark small fw-bold">Estimated Quantity / Length:</label>
+                <input type="text" id="modal-qty" class="form-control bg-light border-secondary border-opacity-25 text-dark py-2" placeholder="e.g. 2 Tons / 50 Pieces" required>
+              </div>
+              <div class="col-12 mt-4 text-end">
+                <button type="button" class="btn btn-outline-secondary me-2" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-molten">
+                  <i class="fab fa-whatsapp me-1"></i> Send To WhatsApp Sales
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <script src="js/SplitText.min.js"></script>
+  <script src="js/magiccursor.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <script src="js/SmoothScroll.js"></script>
+  <script src="js/steel-data.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
