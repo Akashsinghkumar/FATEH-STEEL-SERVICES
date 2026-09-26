@@ -803,13 +803,19 @@ a {
   background: #ffffff;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  padding: 32px;
+  padding: 28px 24px;
   position: relative;
   transition: var(--transition);
   height: 100%;
   display: flex;
   flex-direction: column;
   box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 576px) {
+  .product-card {
+    padding: 22px 18px;
+  }
 }
 
 .product-card:hover {
@@ -878,23 +884,53 @@ a {
 
 .product-spec-list {
   list-style: none;
-  margin-bottom: 24px;
-  border-top: 1px solid var(--border-subtle);
-  padding-top: 16px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .product-spec-list li {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.88rem;
-  padding: 6px 0;
-  color: var(--text-muted);
+  flex-direction: column;
+  padding: 8px 14px;
+  border-bottom: 1px solid #edf2f7;
+  gap: 3px;
+  background: transparent;
+  transition: background 0.2s ease;
+}
+
+.product-spec-list li:last-child {
+  border-bottom: none;
+}
+
+.product-spec-list li:hover {
+  background: #f0f7ff;
+}
+
+.product-spec-list li span:first-child {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--fss-blue);
+  line-height: 1.2;
+  display: block;
 }
 
 .product-spec-list li span:last-child {
-  color: var(--fss-blue-dark);
+  font-size: 0.88rem;
   font-weight: 600;
+  color: var(--fss-blue-dark);
+  line-height: 1.38;
+  display: block;
+  word-break: break-word;
+}
+
+.product-card .btn {
+  margin-top: auto;
 }
 
 /* Steel Grade Interactive Matrix */
