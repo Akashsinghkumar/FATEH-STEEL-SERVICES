@@ -86,7 +86,7 @@
           <button class="btn btn-molten d-none d-sm-inline-flex" data-bs-toggle="modal" data-bs-target="#rfqModal">
             <i class="fas fa-file-invoice me-1"></i> Request Quote
           </button>
-          <button class="btn btn-outline-steel d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <button class="btn btn-outline-steel mobile-menu-toggle d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Toggle Navigation">
             <i class="fas fa-bars"></i>
           </button>
         </div>
@@ -95,37 +95,81 @@
     </div>
   </header>
 
-  <!-- Mobile Menu Offcanvas -->
+  <!-- Mobile Menu Offcanvas with Collapsible Submenu -->
   <div class="offcanvas offcanvas-end bg-white text-dark" tabindex="-1" id="mobileMenu">
-    <div class="offcanvas-header border-bottom border-secondary border-opacity-25">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-25 py-3">
       <div class="d-flex align-items-center gap-2">
         <img src="images/logo.png" alt="FSS Logo" style="height: 42px;">
-        <h5 class="offcanvas-title text-gradient fw-bold mb-0">FATEH STEEL</h5>
+        <div>
+          <h5 class="offcanvas-title text-gradient fw-bold mb-0">FATEH STEEL</h5>
+          <span style="font-size: 0.65rem; color: var(--fss-green-dark); font-weight: 700; letter-spacing: 1px; display: block;">SPECIAL STEEL</span>
+        </div>
       </div>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div class="offcanvas-body">
-      <ul class="list-unstyled d-flex flex-column gap-3 fs-6">
-        <li><a href="index.html" class="text-dark fw-bold"><i class="fas fa-home text-blue me-2"></i>Home</a></li>
-        <li><a href="about.html" class="text-dark fw-bold"><i class="fas fa-info-circle text-blue me-2"></i>About Us</a></li>
-        <li class="border-top border-bottom py-2 my-1">
-          <div class="fw-bold text-blue mb-2"><i class="fas fa-layer-group text-green me-2"></i>Products & Sizing:</div>
-          <div class="ps-3 d-flex flex-column gap-2 small">
-            <a href="products.html" class="text-blue fw-bold">&bull; Core Products (Round, RCS, Hex)</a>
-            <a href="grades.html" class="text-secondary fw-semibold">&bull; Steel Grades Matrix (50+ Grades)</a>
-            <a href="calculator.html" class="text-secondary fw-semibold">&bull; Steel Weight Calculator</a>
-            <a href="quality.html" class="text-secondary fw-semibold">&bull; Quality & Lab Testing</a>
+    <div class="offcanvas-body p-3">
+      <ul class="mobile-nav-list">
+        <li>
+          <a href="index.html" class="mobile-nav-link">
+            <i class="fas fa-home text-blue"></i> Home
+          </a>
+        </li>
+        <li>
+          <a href="about.html" class="mobile-nav-link">
+            <i class="fas fa-info-circle text-blue"></i> About Us
+          </a>
+        </li>
+        
+        <!-- Interactive Collapsible Submenu -->
+        <li class="mobile-submenu-box open">
+          <button type="button" class="mobile-submenu-toggle">
+            <span class="d-flex align-items-center gap-2">
+              <i class="fas fa-layer-group text-blue"></i> Products & Sizes
+            </span>
+            <i class="fas fa-chevron-down arrow-icon"></i>
+          </button>
+          <div class="mobile-submenu-items">
+            <a href="products.html" class="mobile-sub-item active">
+              <i class="fas fa-cubes"></i> Core Products & Sizes
+            </a>
+            <a href="grades.html" class="mobile-sub-item">
+              <i class="fas fa-flask"></i> Steel Grades & Chemical Matrix
+            </a>
+            <a href="calculator.html" class="mobile-sub-item">
+              <i class="fas fa-calculator"></i> Steel Weight Calculator
+            </a>
+            <a href="quality.html" class="mobile-sub-item">
+              <i class="fas fa-stamp"></i> Quality & Lab Testing
+            </a>
           </div>
         </li>
-        <li><a href="gallery.html" class="text-dark fw-bold"><i class="fas fa-warehouse text-blue me-2"></i>Stock Gallery</a></li>
-        <li><a href="contact.html" class="text-dark fw-bold"><i class="fas fa-envelope text-blue me-2"></i>Contact Us</a></li>
+
+        <li>
+          <a href="gallery.html" class="mobile-nav-link">
+            <i class="fas fa-warehouse text-blue"></i> Stock Gallery
+          </a>
+        </li>
+        <li>
+          <a href="contact.html" class="mobile-nav-link">
+            <i class="fas fa-envelope text-blue"></i> Contact Us
+          </a>
+        </li>
       </ul>
+
       <div class="mt-4 pt-3 border-top border-secondary border-opacity-25">
         <p class="small text-muted mb-1 font-monospace">GSTIN: 03EIYPS8359Q1ZR</p>
         <p class="small text-muted mb-3 font-monospace">UDYAM-PB-12-0274183</p>
         <button class="btn btn-molten w-100" data-bs-toggle="modal" data-bs-target="#rfqModal" data-bs-dismiss="offcanvas">
           <i class="fas fa-file-invoice me-2"></i> Request Instant Quote
         </button>
+        <div class="d-flex gap-2 mt-2">
+          <a href="tel:+919876543210" class="btn btn-sm btn-outline-steel flex-grow-1 text-center">
+            <i class="fas fa-phone-alt text-green me-1"></i> Call Us
+          </a>
+          <a href="https://wa.me/919876543210?text=Hello%20Fateh%20Steel%20Services" target="_blank" class="btn btn-sm btn-green flex-grow-1 text-center">
+            <i class="fab fa-whatsapp me-1"></i> WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   </div>
