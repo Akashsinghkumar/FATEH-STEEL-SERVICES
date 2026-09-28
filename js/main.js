@@ -479,21 +479,106 @@ document.addEventListener('DOMContentLoaded', function () {
   // Initial calculation
   updateCalculatorForm();
 
-  // --- 9. RFQ & WHATSAPP GENERATOR ---
+  // --- 9. RFQ & PHPMAILER AJAX HANDLER WITH WHATSAPP BACKUP ---
   const rfqForm = document.getElementById('rfq-lead-form');
-  rfqForm?.addEventListener('submit', function (e) {
+  rfqForm?.addEventListener('submit', async function (e) {
     e.preventDefault();
-    const name = document.getElementById('rfq-name')?.value || 'Valued Buyer';
-    const company = document.getElementById('rfq-company')?.value || 'Client';
-    const grade = document.getElementById('rfq-grade')?.value || 'Special Steel';
-    const size = document.getElementById('rfq-size')?.value || 'Standard Size';
-    const qty = document.getElementById('rfq-quantity')?.value || 'As required';
-    const note = document.getElementById('rfq-note')?.value || '';
+    
+    const submitBtn = document.getElementById('rfq-submit-btn') || this.querySelector('button[type="submit"]');
+    const statusBox = document.getElementById('rfq-form-status');
+    const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Submit Inquiry';
 
-    const text = `*NEW INQUIRY - FATEH STEEL SERVICES*\n------------------------\n*Name:* ${name}\n*Company:* ${company}\n*Required Steel Grade:* ${grade}\n*Size Range:* ${size}\n*Quantity:* ${qty}\n*Specific Requirements:* ${note}\n------------------------\n_Generated via Fateh Steel Website_`;
+    const name = document.getElementById('rfq-name')?.value.trim() || '';
+    const company = document.getElementById('rfq-company')?.value.trim() || '';
+    const phone = document.getElementById('rfq-phone')?.value.trim() || '';
+    const email = document.getElementById('rfq-email')?.value.trim() || '';
+    const grade = document.getElementById('rfq-grade')?.value.trim() || '';
+    const size = document.getElementById('rfq-size')?.value.trim() || '';
+    const qty = document.getElementById('rfq-quantity')?.value.trim() || '';
+    const note = document.getElementById('rfq-note')?.value.trim() || '';
 
-    const encoded = encodeURIComponent(text);
-    window.open(`https://wa.me/919876543210?text=${encoded}`, '_blank');
+    // Show loading state
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Sending Inquiry...';
+    }
+    if (statusBox) {
+      statusBox.style.display = 'none';
+      statusBox.innerHTML = '';
+    }
+
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('company', company);
+    formData.append('phone', phone);
+    formData.append('email', email);
+    formData.append('grade', grade);
+    formData.append('size', size);
+    formData.append('quantity', qty);
+    formData.append('note', note);
+
+    try {
+      const response = await fetch('send-mail.php', {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.json().catch(() => null);
+
+      if (response.ok && result && result.success) {
+        if (statusBox) {
+          statusBox.style.display = 'block';
+          statusBox.innerHTML = `
+            <div class="alert alert-success border-0 shadow-sm text-start p-3 rounded-3" style="background: #eef9e4; border-left: 4px solid #72be1e !important;">
+              <div class="d-flex align-items-center gap-3">
+                <i class="fas fa-check-circle fs-3 text-success"></i>
+                <div>
+                  <h6 class="mb-1 text-dark fw-bold">Inquiry Sent Successfully!</h6>
+                  <p class="mb-0 text-muted small">${result.message}</p>
+                </div>
+              </div>
+            </div>`;
+        }
+        rfqForm.reset();
+      } else {
+        const errorMsg = (result && result.message) ? result.message : 'Notice: To receive emails via PHPMailer, please ensure send-mail.php is hosted on a PHP server with SMTP configured.';
+        if (statusBox) {
+          statusBox.style.display = 'block';
+          statusBox.innerHTML = `
+            <div class="alert alert-warning border-0 shadow-sm text-start p-3 rounded-3">
+              <div class="d-flex align-items-center gap-3">
+                <i class="fas fa-info-circle fs-3 text-warning"></i>
+                <div>
+                  <h6 class="mb-1 text-dark fw-bold">Inquiry Notification</h6>
+                  <p class="mb-0 text-muted small">${errorMsg}</p>
+                </div>
+              </div>
+            </div>`;
+        }
+      }
+    } catch (err) {
+      if (statusBox) {
+        statusBox.style.display = 'block';
+        statusBox.innerHTML = `
+          <div class="alert alert-info border-0 shadow-sm text-start p-3 rounded-3">
+            <div class="d-flex align-items-center gap-3">
+              <i class="fab fa-whatsapp fs-2 text-success"></i>
+              <div>
+                <h6 class="mb-1 text-dark fw-bold">Direct WhatsApp Dispatch Ready</h6>
+                <p class="mb-2 text-muted small">PHP server unavailable locally. You can send this inquiry directly via WhatsApp:</p>
+                <a href="https://wa.me/919876543210?text=${encodeURIComponent('*NEW INQUIRY - FATEH STEEL SERVICES*\n------------------------\n*Name:* ' + name + '\n*Company:* ' + company + '\n*Phone:* ' + phone + '\n*Grade:* ' + grade + '\n*Size:* ' + size + '\n*Quantity:* ' + qty + '\n*Note:* ' + note)}" target="_blank" class="btn btn-sm btn-whatsapp">
+                  <i class="fab fa-whatsapp me-1"></i> Send on WhatsApp Now
+                </a>
+              </div>
+            </div>
+          </div>`;
+      }
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      }
+    }
   });
 
   // --- 10. SMOOTH SCROLL FOR IN-PAGE ANCHORS ---
