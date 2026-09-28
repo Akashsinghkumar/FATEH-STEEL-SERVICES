@@ -1695,13 +1695,28 @@ a {
   50% { transform: translateY(-8px); }
 }
 
-.about-floating-pill i {
-  font-size: 2.5rem;
-  color: #008ee6;
-  filter: drop-shadow(0 4px 10px rgba(0, 142, 230, 0.35));
+.about-pill-award-icon {
+  position: relative;
+  width: 46px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-pill-award-icon .badge-flower {
+  font-size: 2.75rem;
+  color: #008ee6;
+  position: absolute;
+  filter: drop-shadow(0 4px 10px rgba(0, 142, 230, 0.35));
+}
+
+.about-pill-award-icon .badge-trophy {
+  font-size: 1.35rem;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
 }
 
 .about-floating-pill-text strong {
