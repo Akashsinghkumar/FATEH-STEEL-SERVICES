@@ -14,11 +14,11 @@
   --fss-blue-soft: #e6f3ff;
   --fss-blue-glow: rgba(0, 102, 178, 0.25);
   
-  --fss-green: #72be1e;
-  --fss-green-dark: #528c11;
-  --fss-green-light: #8ce02c;
-  --fss-green-soft: #eef9e4;
-  --fss-green-glow: rgba(114, 190, 30, 0.25);
+  --fss-green: #0284c7;
+  --fss-green-dark: #0369a1;
+  --fss-green-light: #38bdf8;
+  --fss-green-soft: #e0f2fe;
+  --fss-green-glow: rgba(56, 189, 248, 0.25);
 
   --fss-silver: #64748b;
   --fss-silver-light: #e2e8f0;
@@ -48,12 +48,12 @@
   --border-subtle: #e2e8f0;
   --border-medium: #cbd5e1;
   --border-blue: rgba(0, 102, 178, 0.3);
-  --border-green: rgba(114, 190, 30, 0.4);
+  --border-green: rgba(56, 189, 248, 0.4);
 
   /* Gradients based on FSS Logo */
   --fss-blue-gradient: linear-gradient(135deg, #003a6d 0%, #0066b2 55%, #0099f7 100%);
-  --fss-green-gradient: linear-gradient(135deg, #528c11 0%, #72be1e 100%);
-  --fss-combo-gradient: linear-gradient(135deg, #0066b2 0%, #008ee6 50%, #72be1e 100%);
+  --fss-green-gradient: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
+  --fss-combo-gradient: linear-gradient(135deg, #0066b2 0%, #008ee6 50%, #38bdf8 100%);
   --fss-silver-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
 
   /* Font Families */
@@ -166,6 +166,17 @@ a {
   display: inline-block;
 }
 
+.text-light-blue {
+  color: #38bdf8 !important;
+}
+
+.text-gradient-light {
+  background: linear-gradient(135deg, #38bdf8 0%, #008ee6 50%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
 .text-green {
   color: var(--fss-green-dark) !important;
 }
@@ -204,7 +215,7 @@ a {
   gap: 8px;
   padding: 6px 18px;
   background: var(--fss-green-soft);
-  border: 1.5px solid rgba(114, 190, 30, 0.35);
+  border: 1.5px solid var(--border-green);
   border-radius: var(--radius-full);
   color: var(--fss-green-dark);
   font-size: 0.85rem;
@@ -332,14 +343,39 @@ a {
   border-radius: var(--radius-md);
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 18px rgba(114, 190, 30, 0.35);
+  box-shadow: 0 4px 18px rgba(2, 132, 199, 0.35);
   transition: var(--transition);
 }
 
 .btn-green:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(114, 190, 30, 0.5);
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.5);
   color: #ffffff;
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #25d366 !important;
+  color: #ffffff !important;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
+  transition: var(--transition);
+}
+
+.btn-whatsapp:hover {
+  background: #20ba5a !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.55);
+  color: #ffffff !important;
 }
 
 .btn-outline-steel {
@@ -601,7 +637,7 @@ a {
   position: absolute;
   width: 650px;
   height: 650px;
-  background: radial-gradient(circle, rgba(0, 102, 178, 0.1) 0%, rgba(114, 190, 30, 0.05) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 102, 178, 0.1) 0%, rgba(56, 189, 248, 0.08) 50%, transparent 70%);
   top: 15%;
   right: 10%;
   filter: blur(60px);
@@ -1180,7 +1216,7 @@ a {
 }
 
 .calc-result-box {
-  background: #eef9e4;
+  background: var(--fss-green-soft);
   border: 1.5px dashed var(--fss-green);
   border-radius: var(--radius-md);
   padding: 24px;
@@ -1265,7 +1301,7 @@ a {
 .whatsapp-float:hover {
   transform: scale(1.1) rotate(6deg);
   box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
-  color: #834e4e;
+  color: #ffffff;
 }
 
 /* Premium Dark Slate / Gunmetal Industrial Footer with Light Logo Plate */
@@ -1564,7 +1600,7 @@ a {
   gap: 8px;
   background: rgba(0, 24, 48, 0.65);
   border: 1.5px solid var(--fss-green);
-  color: #8ce02c;
+  color: #38bdf8;
   padding: 6px 18px;
   border-radius: var(--radius-full);
   font-size: 0.85rem;
@@ -1754,7 +1790,7 @@ a {
 }
 
 .feature-link-card:hover h6 i {
-  color: #8ce02c !important;
+  color: #38bdf8 !important;
   transform: scale(1.15);
 }
 
@@ -1988,9 +2024,9 @@ a {
   width: 60px;
   height: 60px;
   border-radius: 14px;
-  background: rgba(114, 190, 30, 0.18);
+  background: rgba(56, 189, 248, 0.18);
   border: 1px solid var(--fss-green);
-  color: #8ce02c;
+  color: #38bdf8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2084,9 +2120,9 @@ a {
 }
 
 .btn-outline-green {
-  background: rgba(114, 190, 30, 0.18);
-  color: #8ce02c !important;
-  border: 1.5px solid var(--fss-green);
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8 !important;
+  border: 1.5px solid #38bdf8;
   font-weight: 700;
   backdrop-filter: blur(8px);
   transition: var(--transition);
@@ -2098,15 +2134,15 @@ a {
 }
 
 .btn-outline-green:hover {
-  background: var(--fss-green);
+  background: #0284c7;
   color: #ffffff !important;
-  border-color: var(--fss-green);
+  border-color: #0284c7;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(114, 190, 30, 0.35);
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.35);
 }
 
 .btn-green {
-  background: linear-gradient(135deg, #72be1e 0%, #528c11 100%);
+  background: linear-gradient(135deg, #0284c7 0%, #008ee6 100%);
   color: #ffffff !important;
   font-weight: 700;
   border-radius: var(--radius-sm);
@@ -2116,14 +2152,14 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 14px rgba(114, 190, 30, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 142, 230, 0.3);
 }
 
 .btn-green:hover {
-  background: linear-gradient(135deg, #5ea315 0%, #41700d 100%);
+  background: linear-gradient(135deg, #0077b6 0%, #0284c7 100%);
   color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(114, 190, 30, 0.45);
+  box-shadow: 0 8px 20px rgba(0, 142, 230, 0.45);
 }
 
 /* ========================================================
