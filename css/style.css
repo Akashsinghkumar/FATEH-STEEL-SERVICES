@@ -1706,8 +1706,9 @@ a {
 }
 
 /* Right Content Typography */
-.about-tagline-orange {
-  color: #ea580c;
+.about-tagline-orange,
+.about-tagline-blue {
+  color: var(--fss-blue);
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -1817,13 +1818,13 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(135deg, #e65c00 0%, #f97316 100%);
+  background: var(--fss-blue-gradient);
   color: #ffffff !important;
   font-size: 1.02rem;
   font-weight: 700;
   padding: 13px 36px;
   border-radius: 50px;
-  box-shadow: 0 8px 25px rgba(230, 92, 0, 0.35);
+  box-shadow: 0 8px 25px rgba(0, 102, 178, 0.35);
   border: none;
   transition: var(--transition);
   cursor: pointer;
@@ -1831,8 +1832,8 @@ a {
 
 .btn-intro-orange:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(230, 92, 0, 0.5);
-  background: linear-gradient(135deg, #cc5200 0%, #ea580c 100%);
+  box-shadow: 0 14px 32px rgba(0, 102, 178, 0.5);
+  background: linear-gradient(135deg, #002244 0%, #003a6d 100%);
   color: #ffffff !important;
 }
 
