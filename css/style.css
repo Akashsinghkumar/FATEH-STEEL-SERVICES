@@ -1666,21 +1666,28 @@ a {
   transform: scale(1.06);
 }
 
-/* Floating Verification Pill */
+/* Floating Verification Pill — Quality Tested Award Badge */
 .about-floating-pill {
   position: absolute;
-  bottom: 25px;
-  left: -10px;
-  z-index: 3;
+  bottom: 35px;
+  left: 25px;
+  z-index: 5;
   background: #ffffff;
-  padding: 12px 20px;
-  border-radius: 16px;
-  box-shadow: 0 12px 32px rgba(0, 58, 109, 0.16);
-  border-left: 4px solid var(--fss-green);
-  display: flex;
+  padding: 14px 32px 14px 22px;
+  border-radius: 60px;
+  box-shadow: 0 16px 42px rgba(0, 34, 68, 0.16), 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 2px solid #eef2f6;
+  border-left: 5px solid #008ee6;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   animation: floatBadge 4s ease-in-out infinite;
+  transition: var(--transition);
+}
+
+.about-floating-pill:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 22px 50px rgba(0, 34, 68, 0.22);
 }
 
 @keyframes floatBadge {
@@ -1689,20 +1696,32 @@ a {
 }
 
 .about-floating-pill i {
-  font-size: 1.8rem;
-  color: var(--fss-green);
+  font-size: 2.5rem;
+  color: #008ee6;
+  filter: drop-shadow(0 4px 10px rgba(0, 142, 230, 0.35));
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-floating-pill-text strong {
   display: block;
-  font-size: 0.92rem;
-  color: var(--text-main);
-  line-height: 1.2;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #002244;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  font-family: var(--font-heading);
 }
 
 .about-floating-pill-text span {
-  font-size: 0.75rem;
-  color: var(--text-muted);
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #64748b;
+  margin-top: 3px;
+  letter-spacing: 0.01em;
+  font-family: var(--font-body);
 }
 
 /* Right Content Typography */
