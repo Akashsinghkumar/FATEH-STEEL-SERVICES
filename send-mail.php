@@ -41,7 +41,7 @@ $smtpPort       = 587;                          // 587 for TLS ya 465 for SSL
 $smtpSecure     = PHPMailer::ENCRYPTION_STARTTLS; // PHPMailer::ENCRYPTION_SMTPS for 465
 
 // Receiver Details (Jahan aapko inquiry emails milne chahiye)
-$receiverEmail  = 'info@fatehsteelservices.com';  // Aapka receiver email (e.g. your-email@gmail.com)
+$receiverEmail  = 'fatehsteelservices@gmail.com';  // Aapka receiver email (e.g. your-email@gmail.com)
 $receiverName   = 'Fateh Steel Services Sales Desk';
 
 // ============================================================================

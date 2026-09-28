@@ -398,7 +398,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
       </div>
       <div class="mt-4 pt-3 border-top border-secondary border-opacity-25 text-end">
-        <a href="https://wa.me/919876543210?text=Hi%20Fateh%20Steel%20Services,%20I%20need%20a%20quote%20for%20Grade%20${encodeURIComponent(gradeObj.grade)}" target="_blank" class="btn btn-molten">
+        <a href="https://wa.me/919501467983?text=Hi%20Fateh%20Steel%20Services,%20I%20need%20a%20quote%20for%20Grade%20${encodeURIComponent(gradeObj.grade)}" target="_blank" class="btn btn-molten">
           <i class="fab fa-whatsapp me-2"></i> Instant Quote for ${gradeObj.grade}
         </a>
       </div>
@@ -566,7 +566,7 @@ document.addEventListener('DOMContentLoaded', function () {
               <div>
                 <h6 class="mb-1 text-dark fw-bold">Direct WhatsApp Dispatch Ready</h6>
                 <p class="mb-2 text-muted small">PHP server unavailable locally. You can send this inquiry directly via WhatsApp:</p>
-                <a href="https://wa.me/919876543210?text=${encodeURIComponent('*NEW INQUIRY - FATEH STEEL SERVICES*\n------------------------\n*Name:* ' + name + '\n*Company:* ' + company + '\n*Phone:* ' + phone + '\n*Grade:* ' + grade + '\n*Size:* ' + size + '\n*Quantity:* ' + qty + '\n*Note:* ' + note)}" target="_blank" class="btn btn-sm btn-whatsapp">
+                <a href="https://wa.me/919501467983?text=${encodeURIComponent('*NEW INQUIRY - FATEH STEEL SERVICES*\n------------------------\n*Name:* ' + name + '\n*Company:* ' + company + '\n*Phone:* ' + phone + '\n*Grade:* ' + grade + '\n*Size:* ' + size + '\n*Quantity:* ' + qty + '\n*Note:* ' + note)}" target="_blank" class="btn btn-sm btn-whatsapp">
                   <i class="fab fa-whatsapp me-1"></i> Send on WhatsApp Now
                 </a>
               </div>
