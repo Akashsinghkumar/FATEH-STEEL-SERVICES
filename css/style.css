@@ -2365,3 +2365,256 @@ a {
   background: #e6f3ff;
   color: var(--fss-blue-dark) !important;
 }
+
+/* ==========================================================================
+   CUSTOMER TESTIMONIALS (GOOGLE REVIEWS DESIGN)
+   ========================================================================== */
+.testimonials-section {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.testimonials-header {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 50px;
+}
+
+.testimonials-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.testimonials-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: #64748b;
+  line-height: 1.65;
+  margin: 0 auto;
+}
+
+.testimonial-card-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.testimonial-author-block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 4px 18px 8px;
+}
+
+.testimonial-google-icon {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-author-name {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 3px;
+  line-height: 1.2;
+}
+
+.testimonial-stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #f59e0b;
+  font-size: 0.95rem;
+}
+
+.testimonial-bubble {
+  position: relative;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 26px 26px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.testimonial-bubble::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 28px;
+  width: 14px;
+  height: 14px;
+  background-color: #f8fafc;
+  border-left: 1px solid #e2e8f0;
+  border-top: 1px solid #e2e8f0;
+  transform: rotate(45deg);
+  transition: border-color 0.3s ease;
+}
+
+.testimonial-bubble:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 58, 109, 0.08);
+  border-color: #cbd5e1;
+}
+
+.testimonial-bubble:hover::before {
+  border-color: #cbd5e1;
+}
+
+.testimonial-text {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+  .testimonials-title {
+    font-size: 2.15rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .testimonials-title {
+    font-size: 1.85rem;
+  }
+  .testimonials-header {
+    margin-bottom: 36px;
+  }
+  .testimonial-bubble {
+    padding: 20px 18px;
+  }
+}
+
+/* ==========================================================================
+   VISION & MISSION CARDS (LIGHT THEME WITH LEFT-TO-RIGHT CURTAIN HOVER)
+   ========================================================================== */
+.vm-card {
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 36px 30px;
+  height: 100%;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 58, 109, 0.05);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.45s ease;
+  z-index: 1;
+}
+
+/* The left-to-right curtain pseudo-element */
+.vm-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Vision card curtain (soft royal blue gradient) */
+.vm-card-vision {
+  border-left: 5px solid var(--fss-blue);
+}
+.vm-card-vision::before {
+  background: linear-gradient(135deg, #e6f3ff 0%, #dbeafe 60%, #c7e2fe 100%);
+}
+.vm-card-vision:hover {
+  border-color: #93c5fd;
+  border-left-color: var(--fss-blue);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(0, 102, 178, 0.12);
+}
+
+/* Mission card curtain (soft cyan/green steel gradient) */
+.vm-card-mission {
+  border-left: 5px solid var(--fss-green);
+}
+.vm-card-mission::before {
+  background: linear-gradient(135deg, #e0f2fe 0%, #dcfce7 60%, #bae6fd 100%);
+}
+.vm-card-mission:hover {
+  border-color: #7dd3fc;
+  border-left-color: var(--fss-green);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(2, 132, 199, 0.12);
+}
+
+/* Trigger curtain on hover */
+.vm-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Keep card content on top of curtain */
+.vm-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.vm-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #ffffff;
+  flex-shrink: 0;
+  box-shadow: 0 6px 16px rgba(0, 102, 178, 0.2);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.vm-card:hover .vm-icon-box {
+  transform: scale(1.1) rotate(4deg);
+}
+
+.vm-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--fss-blue-dark);
+  margin-bottom: 0;
+}
+
+.vm-card-text {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #334155;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 767.98px) {
+  .vm-card {
+    padding: 26px 20px;
+  }
+}
+
+
