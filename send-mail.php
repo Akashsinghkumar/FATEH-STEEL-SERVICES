@@ -1,6 +1,6 @@
-<?php
+﻿<?php
 /**
- * FATEH STEEL SERVICES — INQUIRY & RFQ PHPMAILER HANDLER
+ * FATEH STEEL SERVICES â€” INQUIRY & RFQ PHPMAILER HANDLER
  * Sends incoming website inquiries to company email via SMTP
  */
 
@@ -31,22 +31,18 @@ require_once __DIR__ . '/phpmailer/Exception.php';
 require_once __DIR__ . '/phpmailer/PHPMailer.php';
 require_once __DIR__ . '/phpmailer/SMTP.php';
 
-// ============================================================================
-// SMTP CONFIGURATION (Aap apni details yahan update kar sakte hain)
-// ============================================================================
-$smtpHost       = 'smtp.gmail.com';             // SMTP Host (e.g. smtp.gmail.com ya smtp.hostinger.com)
-$smtpUser       = 'your-email@gmail.com';       // Aapka Gmail / Business Email
-$smtpPassword   = 'your-16-digit-app-password'; // Gmail 16-character App Password ya Hosting Mail Password
-$smtpPort       = 587;                          // 587 for TLS ya 465 for SSL
-$smtpSecure     = PHPMailer::ENCRYPTION_STARTTLS; // PHPMailer::ENCRYPTION_SMTPS for 465
+// SMTP CONFIGURATION
+$smtpHost       = 'smtp.gmail.com';
+$smtpUser       = 'info@fatehsteelservices.com';
+$smtpPassword   = 'your-16-digit-app-password';
+$smtpPort       = 587;
+$smtpSecure     = PHPMailer::ENCRYPTION_STARTTLS;
 
-// Receiver Details (Jahan aapko inquiry emails milne chahiye)
-$receiverEmail  = 'fatehsteelservices@gmail.com';  // Aapka receiver email (e.g. your-email@gmail.com)
+// Receiver Details
+$receiverEmail  = 'info@fatehsteelservices.com';
 $receiverName   = 'Fateh Steel Services Sales Desk';
 
-// ============================================================================
 // EXTRACT & SANITIZE FORM INPUTS
-// ============================================================================
 // Support both standard POST and JSON POST
 $rawInput = file_get_contents('php://input');
 $jsonData = json_decode($rawInput, true);
@@ -71,11 +67,8 @@ if (empty($name) || (empty($phone) && empty($email))) {
     exit;
 }
 
-// ============================================================================
 // PREPARE & SEND EMAIL VIA PHPMAILER
-// ============================================================================
 $mail = new PHPMailer(true);
-
 try {
     // Server settings
     $mail->isSMTP();
@@ -173,3 +166,4 @@ try {
         'message' => 'Could not send email. Mailer Error: ' . $mail->ErrorInfo
     ]);
 }
+
